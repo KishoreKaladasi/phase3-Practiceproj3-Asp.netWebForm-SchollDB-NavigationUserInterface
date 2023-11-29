@@ -1,0 +1,27 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="ManageSchoolDatabase_ThroughWebForms_ASP.NET.Main" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <h1 style="color: #2E86C1; font-family: 'Verdana', sans-serif; text-align: center;">Welcome To The RainBow School Database Management</h1>
+            <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+            <h3 style="color: #ff0000; font-family: 'Verdana', sans-serif; text-align: center;">Here you can manage the students, classes, Subjects</h3>
+
+       
+            <br />
+            <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1">
+            </asp:Menu>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
